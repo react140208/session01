@@ -35,15 +35,23 @@ function App() {
     // counter++;
     // console.log(counter);
   };
+  const reset = () => {
+    setCnt(0);
+  };
+  const dec = () => {
+    setCnt(cnt - 1);
+  };
 
   let a = 10;
   return (
     <>
       <h1>Salam Donya</h1>
       <h1 style={{ color: "red" }}>Salam Donya {a}</h1>
-      <input type="text" className={"xyz"} />
+      {/* <input type="text" className={"xyz"} /> */}
       <h1>Counter = {cnt}</h1>
       <button onClick={inc}>➕</button>
+      <button onClick={reset}>🧹</button>
+      <button onClick={dec}>➖</button>
     </>
   );
 }
