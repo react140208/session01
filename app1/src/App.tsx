@@ -24,13 +24,14 @@ function App() {
 
   // }
 
-  const state = useState(1);
-
+  // const state = useState(1);
+  // const cnt = state[0];
+  // const setCnt = state[1];
   //destructure js
+  const [cnt, setCnt] = useState(1);
 
-  let counter = 1;
   const inc = () => {
-    state[1](state[0] + 1);
+    setCnt(cnt + 1);
     // counter++;
     // console.log(counter);
   };
@@ -41,7 +42,7 @@ function App() {
       <h1>Salam Donya</h1>
       <h1 style={{ color: "red" }}>Salam Donya {a}</h1>
       <input type="text" className={"xyz"} />
-      <h1>Counter = {state[0]}</h1>
+      <h1>Counter = {cnt}</h1>
       <button onClick={inc}>➕</button>
     </>
   );
