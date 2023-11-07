@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 /*  JSX
@@ -22,10 +23,16 @@ function App() {
   // function xyz(){
 
   // }
+
+  const state = useState(1);
+
+  //destructure js
+
   let counter = 1;
   const inc = () => {
-    counter++;
-    console.log(counter);
+    state[1](state[0] + 1);
+    // counter++;
+    // console.log(counter);
   };
 
   let a = 10;
@@ -34,7 +41,7 @@ function App() {
       <h1>Salam Donya</h1>
       <h1 style={{ color: "red" }}>Salam Donya {a}</h1>
       <input type="text" className={"xyz"} />
-      <h1>Counter = {counter}</h1>
+      <h1>Counter = {state[0]}</h1>
       <button onClick={inc}>➕</button>
     </>
   );
