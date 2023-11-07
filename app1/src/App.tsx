@@ -50,8 +50,9 @@ function App() {
         <img src={reactLogo} alt="React" className="logo react" />
         <h1>Salam Donya</h1>
       </div> */}
-      {/* {logo()} */}
-      <Logo />
+      {/* {logo("salam", "xyz")} */}
+      <Logo msg="salam" logo={reactLogo} />
+      <Logo logo="aaa" msg="bye bye" rank={2} />
 
       {/* <h1 style={{ color: "red" }}>Salam Donya {a}</h1> */}
       {/* <input type="text" className={"xyz"} /> */}
@@ -66,7 +67,7 @@ function App() {
 
 export default App;
 
-// function logo() {
+// function logo(param1, param2) {
 //   return (
 //     <div>
 //       <img src={reactLogo} alt="React" className="logo react" />
@@ -77,11 +78,18 @@ export default App;
 
 //component -> function return jsx
 //             name PascalCase
-function Logo() {
+interface LogoProps {
+  msg: string;
+  logo: string;
+  rank?: number;
+}
+function Logo(props: LogoProps) {
+  console.log(props);
   return (
     <div>
-      <img src={reactLogo} alt="React" className="logo react" />
-      <h1>Salam Donya</h1>
+      <img src={props.logo} alt="React" className="logo react" />
+      {/* <h1>Salam Donya</h1> */}
+      <h1>{props.msg}</h1>
     </div>
   );
 }
