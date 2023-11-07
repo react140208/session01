@@ -1,17 +1,17 @@
-# React & React Native - 1402/03
+# React & React Native - 1402/08
 
 ## Tools
 
-- Visual Studio Code - [VS Code](ttps://code.visualstudio.com/)
+- Visual Studio Code - [VS Code](https://code.visualstudio.com/)
   - [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
   - [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
-- [NodeJS](https://nodejs.org/en/download/)
+- ⭐[NodeJS](https://nodejs.org/en/download/)
   - node
   - npm
   - npx
-- [Yarn](https://yarnpkg.com/)
+- 🤷[Yarn](https://yarnpkg.com/)
   - To install: `npm i -g yarn`
 - [React Developer Tools](https://react.dev/learn/react-developer-tools)
 
