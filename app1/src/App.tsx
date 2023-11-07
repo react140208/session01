@@ -1,6 +1,8 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+// import { Logo } from "./components/Logo";
+import Logo from "./components/Logo";
 
 /*  JSX
       js, ts -> html
@@ -76,23 +78,23 @@ export default App;
 //   );
 // }
 
-//component -> function return jsx
-//             name PascalCase
-interface LogoProps {
-  msg: string;
-  logo: string;
-  rank?: number;
-}
-function Logo(props: LogoProps) {
-  console.log(props);
-  return (
-    <div>
-      <img src={props.logo} alt="React" className="logo react" />
-      {/* <h1>Salam Donya</h1> */}
-      <h1>{props.msg}</h1>
-    </div>
-  );
-}
+// //component -> function return jsx
+// //             name PascalCase
+// interface LogoProps {
+//   msg: string;
+//   logo: string;
+//   rank?: number;
+// }
+// function Logo(props: LogoProps) {
+//   console.log(props);
+//   return (
+//     <div>
+//       <img src={props.logo} alt="React" className="logo react" />
+//       {/* <h1>Salam Donya</h1> */}
+//       <h1>{props.msg}</h1>
+//     </div>
+//   );
+// }
 
 function Counter() {
   const [cnt, setCnt] = useState(1);
