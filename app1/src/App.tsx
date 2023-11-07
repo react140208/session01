@@ -15,11 +15,12 @@ import "./App.css";
 */
 
 function App() {
+  // let b = { color: "red" }
   let a = 10;
   return (
     <>
       <h1>Salam Donya</h1>
-      <h1>Salam Donya {a}</h1>
+      <h1 style={{ color: "red" }}>Salam Donya {a}</h1>
       <input type="text" className={"xyz"} />
     </>
   );
