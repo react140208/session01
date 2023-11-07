@@ -3,6 +3,7 @@ import "./App.css";
 // import { Logo } from "./components/Logo";
 import Logo from "./components/Logo";
 import Counter from "./components/Counter";
+import { useState } from "react";
 
 /*  JSX
       js, ts -> html
@@ -18,6 +19,13 @@ import Counter from "./components/Counter";
         events: onclick -> onClick
 */
 // win + . -> emoji selector
+
+const tasks = [
+  { id: 1, name: "task 1", done: true },
+  { id: 2, name: "task 2", done: true },
+  { id: 3, name: "task 3", done: false },
+  { id: 4, name: "task 4", done: false },
+];
 
 function App() {
   // let b = { color: "red" }
@@ -46,6 +54,13 @@ function App() {
   // };
 
   // let a = 10;
+
+  const [showLogo, setShowLogo] = useState(true);
+  const toggle = () => {
+    setShowLogo(!showLogo);
+  };
+
+  // Guard Operator, &&
   return (
     <>
       {/* <div>
@@ -53,7 +68,12 @@ function App() {
         <h1>Salam Donya</h1>
       </div> */}
       {/* {logo("salam", "xyz")} */}
-      <Logo msg="salam" logo={reactLogo} />
+      <button onClick={toggle}>Toggle Logo</button>
+
+      {/* <Logo msg="salam" logo={reactLogo} /> */}
+      {/* {showLogo ? <Logo msg="salam" logo={reactLogo} /> : null} */}
+      {showLogo && <Logo msg="salam" logo={reactLogo} />}
+
       <Logo logo="aaa" msg="bye bye" rank={2} />
 
       {/* <h1 style={{ color: "red" }}>Salam Donya {a}</h1> */}
@@ -63,6 +83,15 @@ function App() {
       <button onClick={reset}>🧹</button>
       <button onClick={dec}>➖</button> */}
       <Counter />
+      {/* { id: 1, name: "task 1", done: true } -> 
+          <li >task1, ✅</li> */}
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>
+            {task.name} - {task.done ? "✅" : "🟨"}{" "}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
